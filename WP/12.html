@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Flexbox</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #555;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 3;
+            padding: 20px;
+            border: 2px solid #ddd;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 2px solid #ddd;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 180px;
+            padding: 20px;
+            background-color: #e6f2ff;
+            border: 1px solid #999;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>My College Website</h1>
+
+        <p>
+            Responsive webpage using Flexbox
+        </p>
+
+    </header>
+
+
+    <nav>
+
+        <a href="#">Home</a>
+
+        <a href="#">About</a>
+
+        <a href="#">Courses</a>
+
+        <a href="#">Contact</a>
+
+    </nav>
+
+
+    <main>
+
+        <div class="container">
+
+            <div class="content">
+
+                <h2>Our Courses</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+
+                        <h3>BCA</h3>
+
+                        <p>
+                            Bachelor of Computer Applications
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>BBA</h3>
+
+                        <p>
+                            Bachelor of Business Administration
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>B.Com</h3>
+
+                        <p>
+                            Bachelor of Commerce
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <aside class="sidebar">
+
+                <h2>News</h2>
+
+                <p>
+                    Admissions are open
+                </p>
+
+                <p>
+                    Upcoming college events
+                </p>
+
+                <p>
+                    Student activities
+                </p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 My College Website
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

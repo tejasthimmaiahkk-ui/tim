@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial</title>
+</head>
+<body>
+
+    <h2>Factorial of a Number</h2>
+
+    <label>Enter a number</label>
+    <input type="number" id="num">
+    <br><br>
+    <button onclick="findFactorial()">Find</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findFactorial() {
+            let num = Number(document.getElementById("num").value);
+            let factorial = 1;
+
+            for (let i = 1; i <= num; i++) {
+                factorial = factorial * i;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Factorial of " + num + " = " + factorial;
+        }
+    </script>
+
+</body>
+</html>
